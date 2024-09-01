@@ -21,7 +21,7 @@ export enum APP_ROUTES {
 }
 
 export enum CONTACT {
-    EMAIL = "contact@shivamhomeocare.com",
+    EMAIL = "contact@sshivamhomeocare.com",
     WEBSITE = "https://shivamhomeocare.com",
     PHONE_STYLE1 = "+91 885 803 2566",
     PHONE_STYLE2 = "885-803-2566",
