@@ -1,0 +1,24 @@
+<div class="grey-bg pt-50 pb-50">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="grey-bg-2">
+                    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
+                        (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+                        (beforeChange)="beforeChange($event)">
+                        @for (testimonial of testimonials; track testimonial.image) {
+                        <div ngxSlickItem class="slide">
+                            <img [src]="testimonial.image" width="200" alt="{{testimonial.image}}">
+                        </div>
+                        }
+                    </ngx-slick-carousel>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <button (click)="addSlide()">Add</button>
+<button (click)="removeSlide()">Remove</button>
+<button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
+<button (click)="slickModal.unslick()">unslick</button> -->

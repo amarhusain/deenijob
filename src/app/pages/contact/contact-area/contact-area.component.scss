@@ -1,0 +1,44 @@
+.section-space--inner--80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.contact-area {
+    min-height: 300px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.breadcrumb-page-title {
+    color: #f7f7f7;
+}
+
+
+.section-space--inner--80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.icon-info-wrapper {
+    margin-bottom: -30px;
+}
+
+.single-icon-info {
+    margin-bottom: 30px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    .single-icon-info__image {
+        -webkit-flex-basis: 100px;
+        -ms-flex-preferred-size: 100px;
+        flex-basis: 100px;
+    }
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}

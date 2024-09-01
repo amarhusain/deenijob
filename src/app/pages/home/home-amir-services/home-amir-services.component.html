@@ -1,0 +1,33 @@
+<div class="container pt-100 pb-100">
+    <div class="row ">
+        <div class="col">
+            <h2 class="mt-2 mb-0 service-title text-blue" style="line-height: 1.5;">Amir Traders involved<br>
+                in Engineering, <br>Manufacturing & <br>Hospitality Services</h2>
+        </div>
+        <div class="col">
+            <h3 class="about-list-title text-blue">On-Demand Solutions & In-Depth Experience</h3>
+            <p class="text-justify">Rudrarv Global India started functions actively on the market since 2014. During 7
+                Year activity
+                we developed from a small, unknown firm into a company employing about 120 people that is a leader on
+                the market of
+                enterprises solutions and to carry on a business as Telecommunication, Electrical and Construction
+                Engineering,
+                Industrial Equipment Manufacturing &amp; Trading as well as Hospitality Services with special focus on
+                Technology
+                design and development, implementation and support, consulting and utilization training.</p>
+
+            <p>Our strong understanding on-demand solutions and our in-depth experience in the industry give us the
+                competitive
+                strength in the market.</p>
+            <button type="button" class="btn btn-light"> KNOW MORE</button>
+        </div>
+
+    </div>
+
+    <div class="row pt-100">
+        <div class="col" *ngFor="let cardData of cardDataList">
+            <app-home-service-card [cardData]="cardData"></app-home-service-card>
+        </div>
+
+    </div>
+</div>

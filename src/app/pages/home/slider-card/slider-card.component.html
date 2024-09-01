@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col">
+        <div class="card">
+            <div class="card-body" style="height: 300px;">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="star-rating">
+                            <ng-container *ngFor="let star of stars; let i = index">
+                                <i class="bi" [ngClass]="i < testimonial.rating ? 'bi-star-fill' : 'bi-star'"></i>
+                            </ng-container>
+                        </div>
+                        <p class="card-text">Being secure in Telecom’s capability and willingness to deliver allows me
+                            to
+                            concentrate on the other aspects of
+                            projects without worry. Telecom has been an invaluable asset to me.</p>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <div class="card-body" style="height: 300px;">
+                <div class="col-8">
+                    <div class="star-rating">
+                        <ng-container *ngFor="let star of stars; let i = index">
+                            <i class="bi" [ngClass]="i < testimonial.rating ? 'bi-star-fill' : 'bi-star'"></i>
+                        </ng-container>
+                    </div>
+                    <p class="card-text"> Being secure in Telecom’s capability and willingness to deliver allows me to
+                        concentrate on the other aspects of
+                        projects without worry. Telecom has been an invaluable asset to me.</p>
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+    </div>
+</div>

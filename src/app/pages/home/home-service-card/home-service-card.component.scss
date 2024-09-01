@@ -1,0 +1,25 @@
+.about-icon-box {
+    text-align: center;
+    margin-bottom: 30px;
+
+
+    .about-icon-box__image {
+        margin-bottom: 30px;
+        -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        -o-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    &:hover {
+        .about-icon-box__image {
+            -webkit-transform: translateY(-10px);
+            -ms-transform: translateY(-10px);
+            transform: translateY(-10px);
+        }
+    }
+}
+
+.see-more-link {
+
+    color: #ffc246;
+}

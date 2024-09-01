@@ -1,0 +1,12 @@
+.star-rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.bi-star-fill,
+.bi-star {
+    font-size: 1.5rem;
+    color: gold;
+    margin-right: 5px;
+}

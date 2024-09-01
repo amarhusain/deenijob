@@ -1,0 +1,67 @@
+<div class="container pt-100 pb-100">
+
+    <h2 class="text-center">Call Us or Fill The Form</h2>
+
+    <p class="text-center">Leave your information and submit to us. We will response soon...</p>
+    <div class="row mt-5">
+        <div class="col-md-6 offset-md-3">
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                <div class="form-group mb-3">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" minlength="3" id="name" formControlName="name"
+                        placeholder="Enter your name" appForbiddenName="bob" required>
+                    <div *ngIf="name?.invalid && (name?.dirty || name?.touched)" class="text-danger">
+                        <div *ngIf="name?.hasError('required')">
+                            Name is required.
+                        </div>
+                        <div *ngIf="name?.hasError('minlength')">
+                            Name must be at least 3 characters long.
+                        </div>
+                        <div *ngIf="name?.hasError('forbiddenName')">
+                            Name cannot be Bob.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" formControlName="email"
+                        placeholder="Enter email" required>
+                    <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="text-danger">
+                        <div *ngIf="email?.hasError('required')">
+                            Please enter an email address.
+                        </div>
+                        <div *ngIf="email?.hasError('email')">
+                            Please enter a valid email address.
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-group mb-3">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="text" class="form-control" id="mobile" formControlName="mobile" maxlength="10"
+                        placeholder="Enter mobile number" appMobileNumberLength="10" required>
+                    <div *ngIf="mobile?.invalid && (mobile?.dirty || mobile?.touched)" class="text-danger">
+                        <div *ngIf="mobile?.hasError('required')">
+                            Please enter your mobile number.
+                        </div>
+                        <div *ngIf="mobile?.hasError('pattern')">
+                            Please enter a valid mobile number.
+                        </div>
+                        <div *ngIf="mobile?.hasError('mobileNumberLength')">
+                            Mobile number must be 10 digits.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-5">
+                    <label for="message">Message {{contactForm.valid}}</label>
+                    <textarea class="form-control" id="message" rows="3" formControlName="message"
+                        placeholder="Enter your message" required></textarea>
+                    <div *ngIf="contactForm?.get('message')?.hasError('required')" class="invalid-feedback">
+                        Please enter your message.
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary float-end" [disabled]="!contactForm.valid">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="grey-bg pt-50 pb-50">
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col">
+                <div class="d-flex">
+                    <div>
+                        <h1 class="text-blue"><i class="bi bi-chat-left-text"></i></h1>
+                    </div>
+                    <div>
+                        <h1 class="text-blue">Happy Customers Said</h1>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="grey-bg-2">
+                    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
+                        (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+                        (beforeChange)="beforeChange($event)">
+                        @for (slide of slides; track slide.img) {
+                        <div ngxSlickItem class="slide">
+                            <app-slider-card />
+                        </div>
+                        }
+                    </ngx-slick-carousel>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <button (click)="addSlide()">Add</button>
+<button (click)="removeSlide()">Remove</button>
+<button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
+<button (click)="slickModal.unslick()">unslick</button> -->
