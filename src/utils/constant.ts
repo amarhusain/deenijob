@@ -2,12 +2,12 @@
 
 
 export enum PAGE_TITLE {
-    HOME = 'Amir Traders | Home',
-    ABOUT = "Amir Traders | About",
-    CONTACT = "Amir Traders | Contact",
-    LOGIN = "Amir Traders | Login",
-    REGISTER = "Amir Traders | Register",
-    NOTFOUND = "Amir Traders | Page not found"
+    HOME = 'Deeni Jobs | Home',
+    ABOUT = "Deeni Jobs | About",
+    CONTACT = "Deeni Jobs | Contact",
+    LOGIN = "Deeni Jobs | Login",
+    REGISTER = "Deeni Jobs | Register",
+    NOTFOUND = "Deeni Jobs | Page not found"
 }
 
 export enum APP_ROUTES {
