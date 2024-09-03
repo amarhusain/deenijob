@@ -2,3 +2,34 @@
     max-width: 330px;
     height: auto;
 }
+
+.navbar {
+    background-color: green;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: white;
+}
+
+.navbar-nav .dropdown-item {
+    color: green;
+}
+
+.navbar-nav .dropdown-item:hover {
+    color: #004d00;
+    background-color: rgba(0, 77, 0, 0.1);
+}
+
+/* Dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    margin-top: 0;
+    /* Adjusts the position */
+}
