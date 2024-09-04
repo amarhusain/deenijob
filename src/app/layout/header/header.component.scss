@@ -4,7 +4,7 @@
 }
 
 .navbar {
-    background-color: green;
+    background-color: var(--main-green);
 }
 
 .navbar-nav .nav-link {
@@ -16,12 +16,11 @@
 }
 
 .navbar-nav .dropdown-item {
-    color: green;
+    color: var(--main-green);
 }
 
 .navbar-nav .dropdown-item:hover {
-    color: #004d00;
-    background-color: rgba(0, 77, 0, 0.1);
+    background-color: var(--light-green);
 }
 
 /* Dropdown on hover */

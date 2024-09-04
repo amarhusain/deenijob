@@ -1,75 +1,49 @@
-.dark-bg {
-    background-color: #111;
-}
+ .footer-area {
+     background-color: var(--dark-green);
+     color: white;
+     padding-top: 80px;
+     padding-bottom: 40px;
+ }
 
-.section-space--inner--top--80 {
-    padding-top: 80px;
-}
+ .footer-logo img {
+     max-width: 200px;
+ }
 
-.footer-content-wrapper {
-    margin-bottom: 50px;
-}
+ .footer-desc {
+     margin-top: 20px;
+     font-size: 14px;
+ }
 
-.footer-logo {
-    margin-bottom: 35px;
-}
+ .footer-widget__title {
+     font-size: 18px;
+     margin-bottom: 20px;
+     color: white;
+ }
 
-.footer-desc {
-    p {
-        color: #f1f1f1;
-        margin-bottom: 35px;
-        max-width: 500px;
-    }
-}
+ .footer-widget__navigation li {
+     list-style: none;
+     margin-bottom: 10px;
+ }
 
-.footer-intro-wrapper {
-    .social-links {
-        line-height: 1;
+ .footer-widget__navigation li a {
+     color: white;
+     text-decoration: none;
+ }
 
-        ul {
-            li {
-                display: inline-block;
-                margin-right: 20px;
+ .footer-widget__navigation li a:hover {
+     text-decoration: underline;
+ }
 
-                a {
-                    color: #f1f1f1;
+ .social-links ul {
+     list-style: none;
+     padding: 0;
+     display: flex;
+     gap: 15px;
+     margin-top: 20px;
+ }
 
-                    &:hover {
-                        color: #ffc246;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.text-justify {
-    text-align: justify !important;
-}
-
-.footer-widget__title {
-    color: #f8b224;
-    margin-bottom: 40px;
-    font-size: 0.875rem;
-}
-
-.footer-widget__navigation {
-    line-height: 1;
-
-    li:first-child {
-        padding-top: 0;
-    }
-
-    li {
-        padding: 12px 0;
-        line-height: 1;
-
-        a {
-            color: #f1f1f1;
-            -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-            -o-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-            transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-            line-height: 1.2;
-        }
-    }
-}
+ .social-links ul li a {
+     color: white;
+     font-size: 20px;
+     display: inline-block;
+ }
