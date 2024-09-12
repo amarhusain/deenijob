@@ -1,7 +1,7 @@
 # This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
 # For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
 
-name: Node.js Package
+name: Angular Package
 
 on:
   release:
@@ -15,8 +15,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      # Install Angular CLI globally
+      - run: npm install -g @angular/cli
+      # Install project dependencies
       - run: npm ci
-      - run: npm test
+      # Build the Angular project
+      - run: ng build --prod
+      # Run Angular tests
+      - run: ng test --watch=false --browsers=ChromeHeadless
 
   publish-gpr:
     needs: build
