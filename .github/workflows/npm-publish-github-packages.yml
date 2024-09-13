@@ -21,7 +21,7 @@ jobs:
       # Install project dependencies
       - run: npm ci
       # Build the Angular project
-      - run: ng build --prod
+      - run: ng build
       # Run Angular tests
       - run: ng test --watch=false --browsers=ChromeHeadless
 
