@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @Component({
   selector: 'app-brand-logo-slider',
   standalone: true,
-  imports: [SlickCarouselModule],
+  imports: [],
   templateUrl: './brand-logo-slider.component.html',
   styleUrl: './brand-logo-slider.component.scss'
 })

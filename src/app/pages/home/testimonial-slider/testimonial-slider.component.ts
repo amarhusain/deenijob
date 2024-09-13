@@ -1,12 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { SliderCardComponent } from '../slider-card/slider-card.component';
 
 @Component({
   selector: 'app-testimonial-slider',
   standalone: true,
-  imports: [CommonModule, SlickCarouselModule, SliderCardComponent],
+  imports: [CommonModule, SliderCardComponent],
   templateUrl: './testimonial-slider.component.html',
   styleUrl: './testimonial-slider.component.scss'
 })
