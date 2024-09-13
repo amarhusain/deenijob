@@ -4,8 +4,9 @@
 name: Angular Package
 
 on:
-  release:
-    types: [created]
+  push:
+    branches: 
+      - master
 
 jobs:
   build:
