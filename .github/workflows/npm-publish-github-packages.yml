@@ -17,11 +17,11 @@ jobs:
         with:
           node-version: 20
       # Install Angular CLI globally
-      # - run: npm install -g @angular/cli
+      - run: npm install -g @angular/cli
       # Install project dependencies
       - run: npm ci
       # Build the Angular project
-      - run: npm run build
+      - run: ng build --output-path=dist --base-href /deenijob-frontend/
       # Run Angular tests
       # - run: ng test --watch=false --browsers=ChromeHeadless
 
@@ -30,4 +30,21 @@ jobs:
         with:
           name: build-artifact
           path: dist
-          retention-days: 2
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write    # Grant access to GitHub Pages
+      id-token: write # Enable OIDC token for GitHub Pages
+
+    steps:
+      # Step 7: Checkout the code again
+      - uses: actions/checkout@v4
+
+      # Step 8: Deploy to GitHub Pages using the artifact
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist  # Folder to deploy (Angular's `dist` folder)
