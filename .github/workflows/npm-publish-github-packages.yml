@@ -17,11 +17,11 @@ jobs:
         with:
           node-version: 20
       # Install Angular CLI globally
-      - run: npm install -g @angular/cli
+      # - run: npm install -g @angular/cli
       # Install project dependencies
       - run: npm ci
       # Build the Angular project
-      - run: ng build
+      - run: npm run build
       # Run Angular tests
       # - run: ng test --watch=false --browsers=ChromeHeadless
 
