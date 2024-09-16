@@ -1,9 +1,9 @@
 {
-  "name": "@octocat/deenijob-frontend",
+  "name": "@amarhusain/deenijob-frontend",
   "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/octocat/deenijob-frontend.git"
+    "url": "https://github.com/amarhusain/deenijob-frontend.git"
   },
   "scripts": {
     "ng": "ng",
