@@ -11,40 +11,36 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+   
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
-      # Install Angular CLI globally
-      - run: npm install -g @angular/cli
+          node-version: '20.x'
+          cache: 'npm'
       # Install project dependencies
       - run: npm ci
       # Build the Angular project
-      - run: ng build --output-path=dist --base-href /deenijob-frontend/
+      - run: npm run build --if-present
       # Run Angular tests
-      # - run: ng test --watch=false --browsers=ChromeHeadless
+      # - run: npm test --watch=false --browsers=ChromeHeadless
 
-      - name: Upload Build artifacts
-        uses: actions/upload-pages-artifact@v3
-        with:
-          name: build-artifact
-          path: dist
-
+   
   deploy:
-    needs: build
     runs-on: ubuntu-latest
     permissions:
-      pages: write    # Grant access to GitHub Pages
-      id-token: write # Enable OIDC token for GitHub Pages
-
+      contents: read
+      packages: write
     steps:
-      # Step 7: Checkout the code again
       - uses: actions/checkout@v4
-
-      # Step 8: Deploy to GitHub Pages using the artifact
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      # Setup .npmrc file to publish to GitHub Packages
+      - uses: actions/setup-node@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist  # Folder to deploy (Angular's `dist` folder)
+          node-version: '20.x'
+          registry-url: 'https://npm.pkg.github.com'
+          # Defaults to the user or organization that owns the workflow file
+          scope: '@octocat'
+      - run: npm ci
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
