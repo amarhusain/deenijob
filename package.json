@@ -1,10 +1,6 @@
 {
-  "name": "@amarhusain/deenijob-frontend",
+  "name": "deenijob-frontend",
   "version": "0.0.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/amarhusain/deenijob-frontend.git"
-  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
