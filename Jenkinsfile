@@ -21,7 +21,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 // Clone the Angular project from GitHub
-                git branch: 'main', url: 'https://github.com/your-github-username/your-angular-repo.git'
+                git branch: 'master', url: 'https://github.com/amarhusain/deenijob-frontend.git'
             }
         }
         
