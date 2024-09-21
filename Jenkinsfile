@@ -1,15 +1,16 @@
 /* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { docker { image 'node:20.17.0-alpine3.20' } }
+     agent any
     stages {
-        stage('build') {
+        stage('Deploy') {
             steps {
-                sh 'node --version'
-                sh 'echo "Hello World"'
-                sh '''
-                    echo "Multiline shell steps works too 2"
-                    ls -lah
-                '''
+                retry(3) {
+                    sh './flakey-deploy.sh'
+                }
+
+                timeout(time: 3, unit: 'MINUTES') {
+                    sh './health-check.sh'
+                }
             }
         }
     }
